@@ -1,0 +1,30 @@
+- generic [ref=e2]:
+  - button "다크 모드로 변경" [ref=e3] [cursor=pointer]:
+    - img [ref=e4]
+  - generic [ref=e136]:
+    - complementary [ref=e137]:
+      - link "TodoListApp" [ref=e138] [cursor=pointer]:
+        - /url: /todos
+      - navigation [ref=e139]:
+        - link "홈" [ref=e140] [cursor=pointer]:
+          - /url: /todos
+        - link "카테고리" [ref=e141] [cursor=pointer]:
+          - /url: /categories
+        - link "기록" [ref=e142] [cursor=pointer]:
+          - /url: /history
+        - link "프로필" [ref=e143] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=e144]:
+        - generic [ref=e145]: 테스트 사용자
+        - button "로그아웃" [ref=e146] [cursor=pointer]
+    - main [ref=e147]:
+      - generic [ref=e148]:
+        - generic [ref=e149]:
+          - generic [ref=e150]:
+            - heading "기록" [level=1] [ref=e151]
+            - paragraph [ref=e152]: 일정을 등록한 시간을 최신순으로 확인합니다.
+          - button "+ 일정 등록" [ref=e153] [cursor=pointer]
+        - generic [ref=e154]:
+          - paragraph [ref=e155]: 등록된 일정이 없습니다.
+          - paragraph [ref=e156]: 새 일정을 등록하면 이곳에 시간이 기록됩니다.
+          - button "일정 등록" [ref=e157] [cursor=pointer]

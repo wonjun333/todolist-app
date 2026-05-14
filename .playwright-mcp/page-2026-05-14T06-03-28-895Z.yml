@@ -1,0 +1,22 @@
+- generic [ref=e4]:
+  - heading "회원가입" [level=1] [ref=e5]
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: 이름 *
+      - textbox "이름을 입력하세요" [ref=e9]
+    - generic [ref=e10]:
+      - generic [ref=e11]: 이메일 *
+      - textbox "이메일을 입력하세요" [ref=e12]
+    - generic [ref=e13]:
+      - generic [ref=e14]: 비밀번호 (8자 이상) *
+      - textbox "비밀번호를 입력하세요" [ref=e15]
+    - generic [ref=e16]:
+      - generic [ref=e17]: 비밀번호 확인 *
+      - textbox "비밀번호를 다시 입력하세요" [ref=e18]
+    - generic [ref=e19]:
+      - button "가입" [ref=e20] [cursor=pointer]
+      - button "로그인 페이지로" [ref=e21] [cursor=pointer]
+    - paragraph [ref=e22]:
+      - text: 이미 계정이 있으신가요?
+      - link "로그인하기" [ref=e23] [cursor=pointer]:
+        - /url: /auth/login

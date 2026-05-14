@@ -1,0 +1,55 @@
+- generic [ref=e2]:
+  - button "다크 모드로 변경" [ref=e3] [cursor=pointer]:
+    - img [ref=e4]
+  - generic [ref=e21]:
+    - complementary [ref=e22]:
+      - link "TodoListApp" [ref=e23] [cursor=pointer]:
+        - /url: /todos
+      - navigation [ref=e24]:
+        - link "홈" [ref=e25] [cursor=pointer]:
+          - /url: /todos
+        - link "카테고리" [ref=e26] [cursor=pointer]:
+          - /url: /categories
+        - link "프로필" [ref=e27] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=e28]:
+        - generic [ref=e29]: 테스트 사용자
+        - button "로그아웃" [ref=e30] [cursor=pointer]
+    - main [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - button "달력" [ref=e35] [cursor=pointer]
+            - button "목록" [ref=e36] [cursor=pointer]
+          - button "+ 할일 등록" [ref=e37] [cursor=pointer]
+        - generic [ref=e139]:
+          - combobox [ref=e140] [cursor=pointer]:
+            - option "전체 카테고리" [selected]
+            - option "일반"
+            - option "업무"
+            - option "개인"
+          - textbox [ref=e141]
+          - generic [ref=e142]: ~
+          - textbox [ref=e143]
+          - combobox [ref=e144] [cursor=pointer]:
+            - option "전체" [selected]
+            - option "미완료"
+            - option "완료"
+          - button "필터 초기화" [ref=e145] [cursor=pointer]
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - checkbox "전체 일정 선택" [checked] [ref=e150] [cursor=pointer]
+              - generic [ref=e151]: 전체 선택
+            - generic [ref=e152]:
+              - generic [ref=e153]: 1개 선택됨
+              - button "선택 삭제" [ref=e163] [cursor=pointer]
+          - generic [ref=e154] [cursor=pointer]:
+            - 'checkbox "삭제 대상으로 선택: ㅇㅇ" [checked] [active] [ref=e155]'
+            - checkbox "할일 완료 처리" [ref=e156]
+            - generic [ref=e157]:
+              - generic [ref=e158]: ㅇㅇ
+              - generic [ref=e159]:
+                - generic [ref=e160]: 업무
+                - generic [ref=e161]: 2026년 5월 12일
+            - 'button "할일 삭제: ㅇㅇ" [ref=e162]': 삭제

@@ -22,7 +22,7 @@ erDiagram
 
   CATEGORY {
     uuid      id          PK  "고유 식별자"
-    uuid      userId      FK  "소유 사용자 (NULL = 기본 카테고리)"
+    uuid      userId      FK  "소유 사용자 (not null)"
     string    name            "카테고리명 (not null)"
     boolean   isDefault       "기본 카테고리 여부 (default: false)"
     timestamp createdAt       "생성 일시 (not null)"
@@ -65,13 +65,13 @@ erDiagram
 | 컬럼 | 타입 | 제약 | 설명 |
 |------|------|------|------|
 | id | UUID | PK, NOT NULL | 고유 식별자 |
-| userId | UUID | FK → USER.id, **NULL 허용** | 소유 사용자 (NULL이면 기본 카테고리) |
+| userId | UUID | FK → USER.id, NOT NULL | 소유 사용자 |
 | name | VARCHAR | NOT NULL | 카테고리명 |
 | isDefault | BOOLEAN | NOT NULL, DEFAULT false | 기본 카테고리 여부 |
 | createdAt | TIMESTAMP | NOT NULL | 생성 일시 |
 
-> **기본 카테고리 규칙:** `isDefault = true`인 카테고리는 `userId = NULL`을 가집니다.
-> 회원가입 성공 시 일반·업무·개인 3개의 기본 카테고리가 자동 생성됩니다 (UC-A-01 extend UC-C-01).
+> **기본 카테고리 규칙:** `isDefault = true`인 카테고리는 사용자별로 생성되며 수정·삭제할 수 없습니다.
+> 회원가입 성공 시 해당 사용자에게 일반·업무·개인 3개의 기본 카테고리가 자동 생성됩니다 (UC-A-01 extend UC-C-01).
 
 ### 2.3 TODO
 
@@ -94,7 +94,7 @@ erDiagram
 | 관계 | 카디널리티 | 설명 |
 |------|-----------|------|
 | USER → TODO | 1 : N | 사용자는 여러 할일을 소유한다. 사용자 탈퇴 시 할일 데이터 삭제 |
-| USER → CATEGORY | 1 : N | 사용자는 여러 카테고리를 생성한다. 단, 기본 카테고리(userId=NULL)는 예외 |
+| USER → CATEGORY | 1 : N | 사용자는 여러 카테고리를 소유한다 |
 | CATEGORY → TODO | 1 : N | 카테고리는 여러 할일을 분류한다 |
 
 ---
@@ -107,7 +107,7 @@ erDiagram
 | BR-U-02 | 비밀번호는 bcrypt(salt ≥ 10)로 해시 저장한다 |
 | BR-U-04 | 사용자 탈퇴 시 해당 사용자의 모든 데이터(할일, 카테고리)를 삭제한다 |
 | BR-T-01 | 할일은 반드시 하나의 카테고리에 속해야 한다 |
-| BR-T-04 | 완료된 할일은 다시 미완료로 되돌릴 수 없다 |
+| BR-T-04 | 할일 완료 여부는 토글할 수 있다 |
 | BR-C-01 | 기본 카테고리(일반·업무·개인)는 수정·삭제할 수 없다 |
-| BR-C-02 | 카테고리를 삭제하면 해당 카테고리의 할일은 기본 카테고리로 이동한다 |
+| BR-C-02 | 연결된 할일이 있는 카테고리는 삭제할 수 없다 |
 | BR-C-03 | 회원가입 시 기본 카테고리 3개(일반·업무·개인)가 자동 생성된다 |

@@ -45,12 +45,11 @@ COMMENT ON COLUMN users.updated_at IS '정보 수정 일시';
 -- ============================================================
 -- 2. categories
 -- BR-C-01 : isDefault=true 카테고리는 수정·삭제 불가 (애플리케이션 레이어 적용)
--- BR-C-03 : 회원가입 성공 시 기본 카테고리 3개(일반·업무·개인) 자동 생성
---           → user_id=NULL, is_default=true 로 공유 기본 카테고리 사용
+-- BR-C-03 : 회원가입 성공 시 사용자별 기본 카테고리 3개(일반·업무·개인) 자동 생성
 -- ============================================================
 CREATE TABLE categories (
     id          UUID         NOT NULL DEFAULT uuid_generate_v4(),
-    user_id     UUID,                           -- NULL = 기본 카테고리 (BR-C-03)
+    user_id     UUID         NOT NULL,
     name        VARCHAR(100) NOT NULL,
     is_default  BOOLEAN      NOT NULL DEFAULT FALSE,
     created_at  TIMESTAMP    NOT NULL DEFAULT NOW(),
@@ -64,17 +63,16 @@ CREATE TABLE categories (
 
 COMMENT ON TABLE  categories             IS '할일 분류 카테고리';
 COMMENT ON COLUMN categories.id          IS '고유 식별자 (UUID v4)';
-COMMENT ON COLUMN categories.user_id     IS '소유 사용자 FK — NULL이면 시스템 기본 카테고리 (BR-C-03)';
+COMMENT ON COLUMN categories.user_id     IS '소유 사용자 FK';
 COMMENT ON COLUMN categories.name        IS '카테고리명';
-COMMENT ON COLUMN categories.is_default  IS 'true이면 수정·삭제 불가 (BR-C-01), user_id=NULL과 함께 사용';
+COMMENT ON COLUMN categories.is_default  IS 'true이면 수정·삭제 불가 (BR-C-01)';
 COMMENT ON COLUMN categories.created_at  IS '생성 일시';
 
 -- ============================================================
 -- 3. todos
 -- BR-T-01 : 할일은 반드시 하나의 카테고리에 속해야 함 (category_id NOT NULL)
--- BR-T-04 : 완료된 할일은 미완료로 되돌릴 수 없음 (애플리케이션 레이어 적용)
--- BR-C-02 : 카테고리 삭제 시 해당 할일을 기본 카테고리로 이동
---           → ON DELETE RESTRICT + 애플리케이션 레이어에서 이동 후 삭제 처리
+-- BR-T-04 : 완료 여부는 토글할 수 있음
+-- BR-C-02 : 할일이 연결된 카테고리는 삭제할 수 없음
 -- ============================================================
 CREATE TABLE todos (
     id           UUID         NOT NULL DEFAULT uuid_generate_v4(),
@@ -93,7 +91,7 @@ CREATE TABLE todos (
                                       ON DELETE CASCADE,    -- BR-U-04
     CONSTRAINT fk_todos_category  FOREIGN KEY (category_id)
                                       REFERENCES categories (id)
-                                      ON DELETE RESTRICT    -- BR-C-02: 앱 레이어에서 이동 후 삭제
+                                      ON DELETE RESTRICT
 );
 
 COMMENT ON TABLE  todos              IS '사용자 할일';
@@ -103,7 +101,7 @@ COMMENT ON COLUMN todos.category_id  IS '분류 카테고리 FK — NOT NULL 필
 COMMENT ON COLUMN todos.title        IS '할일 제목';
 COMMENT ON COLUMN todos.description  IS '상세 설명 (선택)';
 COMMENT ON COLUMN todos.due_date     IS '마감일 (선택)';
-COMMENT ON COLUMN todos.is_completed IS '완료 여부 — true로 변경 후 되돌릴 수 없음 (BR-T-04)';
+COMMENT ON COLUMN todos.is_completed IS '완료 여부 — 토글 가능 (BR-T-04)';
 COMMENT ON COLUMN todos.created_at   IS '생성 일시';
 COMMENT ON COLUMN todos.updated_at   IS '수정 일시';
 
@@ -127,10 +125,4 @@ CREATE INDEX idx_todos_due_date      ON todos (user_id, due_date);
 CREATE INDEX idx_categories_user_id  ON categories (user_id);
 
 -- ============================================================
--- 기본 카테고리 시드 데이터 (BR-C-03)
--- user_id=NULL, is_default=true — 모든 사용자가 공유하는 기본값
--- ============================================================
-INSERT INTO categories (id, user_id, name, is_default) VALUES
-    (uuid_generate_v4(), NULL, '일반', TRUE),
-    (uuid_generate_v4(), NULL, '업무', TRUE),
-    (uuid_generate_v4(), NULL, '개인', TRUE);
+-- 기본 카테고리는 회원가입 성공 시 애플리케이션 레이어에서 사용자별로 생성합니다.

@@ -132,6 +132,7 @@
 | 데이터베이스 | PostgreSQL | 17 | 주 데이터 저장소 |
 | 백엔드 런타임 | Node.js | LTS | - |
 | 백엔드 프레임워크 | Express | - | REST API |
+| 백엔드 언어 | JavaScript | ES2022+ | TypeScript 미사용 |
 | DB 클라이언트 | pg (node-postgres) | - | ORM 미사용, 필수 라이브러리 |
 | 프론트엔드 프레임워크 | React | 19 | - |
 | 프론트엔드 언어 | TypeScript | - | 전체 적용 |
@@ -685,7 +686,7 @@
 
 | 시간대 | 작업 내용 | 산출물 |
 |--------|-----------|--------|
-| 오전 | 프로젝트 초기 설정 (Node.js + Express + TypeScript), PostgreSQL 연결 (`pg` 라이브러리), DB 스키마 설계 및 마이그레이션 | DB 테이블 생성 완료 |
+| 오전 | 프로젝트 초기 설정 (Node.js + Express, JavaScript), PostgreSQL 연결 (`pg` 라이브러리), DB 스키마 설계 및 마이그레이션 | DB 테이블 생성 완료 |
 | 오전 | 기본 카테고리 시드 데이터 삽입 | seed 스크립트 |
 | 오후 | 인증 API 구현: 회원가입(POST /auth/register), 로그인(POST /auth/login) | 인증 API 완료 |
 | 오후 | JWT 미들웨어 구현, 로그아웃 처리 | 인증 미들웨어 완료 |

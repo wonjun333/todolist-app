@@ -1,0 +1,39 @@
+- generic [ref=e2]:
+  - button "다크 모드로 변경" [ref=e3] [cursor=pointer]:
+    - img [ref=e4]
+  - generic [ref=e144]:
+    - complementary [ref=e145]:
+      - link "TodoListApp" [ref=e146] [cursor=pointer]:
+        - /url: /todos
+      - navigation [ref=e147]:
+        - link "홈" [ref=e148] [cursor=pointer]:
+          - /url: /todos
+        - link "카테고리" [ref=e149] [cursor=pointer]:
+          - /url: /categories
+        - link "기록" [ref=e150] [cursor=pointer]:
+          - /url: /history
+        - link "프로필" [ref=e151] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=e152]:
+        - generic [ref=e153]: 테스트 사용자
+        - button "로그아웃" [ref=e154] [cursor=pointer]
+    - main [ref=e155]:
+      - generic [ref=e156]:
+        - generic [ref=e157]:
+          - generic [ref=e158]:
+            - heading "기록" [level=1] [ref=e159]
+            - paragraph [ref=e160]: 일정을 등록한 시간을 최신순으로 확인합니다.
+          - button "+ 일정 등록" [ref=e161] [cursor=pointer]
+        - list "일정 등록 기록" [ref=e162]:
+          - listitem [ref=e163]:
+            - button "2026. 05. 14. 오후 04:42 기록 테스트 일정 일반 · 마감 2026년 5월 13일 · 진행 중" [ref=e164] [cursor=pointer]:
+              - generic [ref=e165]: 2026. 05. 14. 오후 04:42
+              - generic [ref=e166]:
+                - generic [ref=e167]: 기록 테스트 일정
+                - generic [ref=e168]: 일반 · 마감 2026년 5월 13일 · 진행 중
+          - listitem [ref=e169]:
+            - button "2026. 05. 14. 오후 04:42 ㅇㅇ 업무 · 마감 2026년 5월 12일 · 진행 중" [ref=e170] [cursor=pointer]:
+              - generic [ref=e171]: 2026. 05. 14. 오후 04:42
+              - generic [ref=e172]:
+                - generic [ref=e173]: ㅇㅇ
+                - generic [ref=e174]: 업무 · 마감 2026년 5월 12일 · 진행 중

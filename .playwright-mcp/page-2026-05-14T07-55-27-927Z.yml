@@ -1,0 +1,2 @@
+- button "다크 모드로 변경" [ref=e1] [cursor=pointer]:
+  - img [ref=e2]

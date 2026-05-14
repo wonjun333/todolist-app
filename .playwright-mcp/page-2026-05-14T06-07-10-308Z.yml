@@ -1,0 +1,115 @@
+- generic [ref=e18]:
+  - banner [ref=e19]:
+    - link "TodoListApp" [ref=e20] [cursor=pointer]:
+      - /url: /todos
+    - navigation [ref=e21]:
+      - link "홈" [ref=e22] [cursor=pointer]:
+        - /url: /todos
+      - link "카테고리" [ref=e23] [cursor=pointer]:
+        - /url: /categories
+      - link "프로필" [ref=e24] [cursor=pointer]:
+        - /url: /profile
+    - button "로그아웃" [ref=e26] [cursor=pointer]
+  - main [ref=e27]:
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - button "달력" [ref=e30] [cursor=pointer]
+        - button "목록" [ref=e31] [cursor=pointer]
+      - button "+ 할일 등록" [ref=e32] [cursor=pointer]
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - button "이전 달" [ref=e35] [cursor=pointer]: ‹
+        - generic [ref=e36]: 2026년 5월
+        - button "다음 달" [ref=e37] [cursor=pointer]: ›
+      - generic [ref=e38]:
+        - generic [ref=e39]: 일
+        - generic [ref=e40]: 월
+        - generic [ref=e41]: 화
+        - generic [ref=e42]: 수
+        - generic [ref=e43]: 목
+        - generic [ref=e44]: 금
+        - generic [ref=e45]: 토
+        - button "2026-04-26 할일 등록" [ref=e46]:
+          - generic [ref=e47]: "26"
+        - button "2026-04-27 할일 등록" [ref=e48]:
+          - generic [ref=e49]: "27"
+        - button "2026-04-28 할일 등록" [ref=e50]:
+          - generic [ref=e51]: "28"
+        - button "2026-04-29 할일 등록" [ref=e52]:
+          - generic [ref=e53]: "29"
+        - button "2026-04-30 할일 등록" [ref=e54]:
+          - generic [ref=e55]: "30"
+        - button "2026-05-01 할일 등록" [ref=e56] [cursor=pointer]:
+          - generic [ref=e57]: "1"
+        - button "2026-05-02 할일 등록" [ref=e58] [cursor=pointer]:
+          - generic [ref=e59]: "2"
+        - button "2026-05-03 할일 등록" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: "3"
+        - button "2026-05-04 할일 등록" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: "4"
+        - button "2026-05-05 할일 등록" [ref=e64] [cursor=pointer]:
+          - generic [ref=e65]: "5"
+        - button "2026-05-06 할일 등록" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: "6"
+        - button "2026-05-07 할일 등록" [ref=e68] [cursor=pointer]:
+          - generic [ref=e69]: "7"
+        - button "2026-05-08 할일 등록" [ref=e70] [cursor=pointer]:
+          - generic [ref=e71]: "8"
+        - button "2026-05-09 할일 등록" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: "9"
+        - button "2026-05-10 할일 등록" [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: "10"
+        - button "2026-05-11 할일 등록" [ref=e76] [cursor=pointer]:
+          - generic [ref=e77]: "11"
+        - button "2026-05-12 할일 등록" [ref=e78] [cursor=pointer]:
+          - generic [ref=e79]: "12"
+        - button "2026-05-13 할일 등록" [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]: "13"
+        - button "2026-05-14 할일 등록" [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: "14"
+        - button "2026-05-15 할일 등록" [ref=e84] [cursor=pointer]:
+          - generic [ref=e85]: "15"
+        - button "2026-05-16 할일 등록" [ref=e86] [cursor=pointer]:
+          - generic [ref=e87]: "16"
+        - button "2026-05-17 할일 등록" [ref=e88] [cursor=pointer]:
+          - generic [ref=e89]: "17"
+        - button "2026-05-18 할일 등록" [ref=e90] [cursor=pointer]:
+          - generic [ref=e91]: "18"
+        - button "2026-05-19 할일 등록" [ref=e92] [cursor=pointer]:
+          - generic [ref=e93]: "19"
+        - button "2026-05-20 할일 등록" [ref=e94] [cursor=pointer]:
+          - generic [ref=e95]: "20"
+        - button "2026-05-21 할일 등록" [ref=e96] [cursor=pointer]:
+          - generic [ref=e97]: "21"
+        - button "2026-05-22 할일 등록" [ref=e98] [cursor=pointer]:
+          - generic [ref=e99]: "22"
+        - button "2026-05-23 할일 등록" [ref=e100] [cursor=pointer]:
+          - generic [ref=e101]: "23"
+        - button "2026-05-24 할일 등록" [ref=e102] [cursor=pointer]:
+          - generic [ref=e103]: "24"
+        - button "2026-05-25 할일 등록" [ref=e104] [cursor=pointer]:
+          - generic [ref=e105]: "25"
+        - button "2026-05-26 할일 등록" [ref=e106] [cursor=pointer]:
+          - generic [ref=e107]: "26"
+        - button "2026-05-27 할일 등록" [ref=e108] [cursor=pointer]:
+          - generic [ref=e109]: "27"
+        - button "2026-05-28 할일 등록" [ref=e110] [cursor=pointer]:
+          - generic [ref=e111]: "28"
+        - button "2026-05-29 할일 등록" [ref=e112] [cursor=pointer]:
+          - generic [ref=e113]: "29"
+        - button "2026-05-30 할일 등록" [ref=e114] [cursor=pointer]:
+          - generic [ref=e115]: "30"
+        - button "2026-05-31 할일 등록" [ref=e116] [cursor=pointer]:
+          - generic [ref=e117]: "31"
+        - button "2026-06-01 할일 등록" [ref=e118]:
+          - generic [ref=e119]: "1"
+        - button "2026-06-02 할일 등록" [ref=e120]:
+          - generic [ref=e121]: "2"
+        - button "2026-06-03 할일 등록" [ref=e122]:
+          - generic [ref=e123]: "3"
+        - button "2026-06-04 할일 등록" [ref=e124]:
+          - generic [ref=e125]: "4"
+        - button "2026-06-05 할일 등록" [ref=e126]:
+          - generic [ref=e127]: "5"
+        - button "2026-06-06 할일 등록" [ref=e128]:
+          - generic [ref=e129]: "6"
