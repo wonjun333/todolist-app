@@ -1,0 +1,82 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+  --color-primary-50:  #EAF2FF;
+  --color-primary-100: #D2E3FC;
+  --color-primary-500: #4285F4;
+  --color-primary-600: #1A73E8;
+  --color-white:      #FFFFFF;
+  --color-gray-50:    #F8F9FA;
+  --color-gray-100:   #F1F3F4;
+  --color-gray-300:   #DADCE0;
+  --color-gray-500:   #70757A;
+  --color-gray-700:   #3C4043;
+  --color-gray-900:   #202124;
+  --color-success-100: #E6F4EA;
+  --color-success-600: #188038;
+  --color-error-100:   #FCE8E6;
+  --color-error-600:   #D93025;
+  --color-warning-100: #FEF7E0;
+  --color-warning-600: #E37400;
+  --font-sans: 'Pretendard', 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
+  --text-xs:   11px;
+  --text-sm:   13px;
+  --text-base: 14px;
+  --text-md:   16px;
+  --text-lg:   18px;
+  --text-xl:   22px;
+  --text-2xl:  28px;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.16);
+  --transition-fast: 0.1s ease;
+  --transition-base: 0.15s ease;
+}
+
+[data-theme="dark"] {
+  --color-primary-50:  #1a2f5e;
+  --color-primary-100: #1e3a70;
+  --color-primary-500: #5ba3f5;
+  --color-primary-600: #5ba3f5;
+  --color-white:      #1e1e2e;
+  --color-gray-50:    #121218;
+  --color-gray-100:   #2a2a3a;
+  --color-gray-300:   #3d3d52;
+  --color-gray-500:   #9aa0a6;
+  --color-gray-700:   #c4c7c5;
+  --color-gray-900:   #e8eaed;
+  --color-success-100: #1a3329;
+  --color-success-600: #4caf7d;
+  --color-error-100:   #3b1a18;
+  --color-error-600:   #f28b82;
+  --color-warning-100: #3b2e0a;
+  --color-warning-600: #fdd663;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-gray-900);
+  background: var(--color-gray-50);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary-600);
+  outline-offset: 2px;
+}
