@@ -4,7 +4,7 @@ const env = require('./config/env');
 const express = require('express');
 const cors = require('cors');
 const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('../../swagger/swagger.json');
+const swaggerDocument = require('../swagger/swagger.json');
 const errorHandler = require('./middlewares/error-handler');
 
 const app = express();
