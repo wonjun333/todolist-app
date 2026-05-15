@@ -1,0 +1,38 @@
+- generic [ref=e2]:
+  - button "다크 모드로 변경" [ref=e3] [cursor=pointer]:
+    - img [ref=e4]
+  - generic [ref=e1482]:
+    - complementary [ref=e1483]:
+      - link "TodoListApp 홈" [ref=e1484] [cursor=pointer]:
+        - /url: /todos
+        - img [ref=e1485]
+        - generic [ref=e1493]: TodoListApp
+      - navigation [ref=e1494]:
+        - link "홈" [ref=e1495] [cursor=pointer]:
+          - /url: /todos
+        - link "카테고리" [ref=e1496] [cursor=pointer]:
+          - /url: /categories
+        - link "프로필" [ref=e1497] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=e1498]:
+        - generic [ref=e1499]: 김지수
+        - button "로그아웃" [ref=e1500] [cursor=pointer]
+    - main [ref=e1501]:
+      - generic [ref=e1502]:
+        - heading "개인정보 수정" [level=1] [ref=e1503]
+        - generic [ref=e1504]:
+          - generic [ref=e1505]:
+            - generic [ref=e1506]: 이메일
+            - textbox [ref=e1507]: jisoo_e2e@example.com
+          - generic [ref=e1508]:
+            - generic [ref=e1509]: 이름
+            - textbox [ref=e1510]: 김지수
+          - generic [ref=e1511]:
+            - generic [ref=e1512]: 새 비밀번호 (선택)
+            - textbox "새 비밀번호 (8자 이상)" [ref=e1513]
+          - generic [ref=e1514]:
+            - generic [ref=e1515]: 비밀번호 확인 (선택)
+            - textbox "비밀번호를 다시 입력하세요" [ref=e1516]
+          - paragraph [ref=e1517]: 변경된 항목이 없습니다.
+          - generic [ref=e1518]:
+            - button "저장" [disabled]

@@ -1,0 +1,19 @@
+- generic [ref=e2]:
+  - button "다크 모드로 변경" [ref=e3] [cursor=pointer]:
+    - img [ref=e4]
+  - generic [ref=e7]:
+    - heading "로그인" [level=1] [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]: 이메일
+        - textbox "이메일을 입력하세요" [ref=e12]: wrong@example.com
+      - generic [ref=e13]:
+        - generic [ref=e14]: 비밀번호
+        - textbox "비밀번호를 입력하세요" [active] [ref=e15]: WrongPass!
+      - generic [ref=e16]:
+        - button "로그인" [ref=e17] [cursor=pointer]
+        - button "회원가입하기" [ref=e18] [cursor=pointer]
+      - paragraph [ref=e19]:
+        - text: 아직 계정이 없으신가요?
+        - link "회원가입하기" [ref=e20] [cursor=pointer]:
+          - /url: /auth/register

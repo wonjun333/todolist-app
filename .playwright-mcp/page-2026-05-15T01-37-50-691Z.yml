@@ -1,0 +1,42 @@
+- generic [ref=e2]:
+  - button "다크 모드로 변경" [ref=e3] [cursor=pointer]:
+    - img [ref=e4]
+  - generic [ref=e1165]:
+    - complementary [ref=e1166]:
+      - link "TodoListApp 홈" [ref=e1167] [cursor=pointer]:
+        - /url: /todos
+        - img [ref=e1168]
+        - generic [ref=e1176]: TodoListApp
+      - navigation [ref=e1177]:
+        - link "홈" [ref=e1178] [cursor=pointer]:
+          - /url: /todos
+        - link "카테고리" [ref=e1179] [cursor=pointer]:
+          - /url: /categories
+        - link "프로필" [ref=e1180] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=e1181]:
+        - generic [ref=e1182]: 김지수
+        - button "로그아웃" [ref=e1183] [cursor=pointer]
+    - main [ref=e1184]:
+      - generic [ref=e1185]:
+        - heading "할일 등록" [level=1] [ref=e1186]
+        - generic [ref=e1187]:
+          - generic [ref=e1188]:
+            - generic [ref=e1189]: 제목 *
+            - textbox "할일 제목을 입력하세요" [ref=e1190]
+          - generic [ref=e1191]:
+            - generic [ref=e1192]: 설명 (선택)
+            - textbox "상세 설명을 입력하세요" [ref=e1193]
+          - generic [ref=e1194]:
+            - generic [ref=e1195]: 종료예정일 (선택)
+            - textbox [ref=e1196]
+          - generic [ref=e1197]:
+            - generic [ref=e1198]: 카테고리 *
+            - combobox [ref=e1199] [cursor=pointer]:
+              - option "선택하기" [selected]
+              - option "일반"
+              - option "업무"
+              - option "개인"
+          - generic [ref=e1200]:
+            - button "저장" [ref=e1201] [cursor=pointer]
+            - button "취소" [ref=e1202] [cursor=pointer]

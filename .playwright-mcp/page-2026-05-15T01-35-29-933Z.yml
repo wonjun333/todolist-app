@@ -1,0 +1,44 @@
+- generic [ref=e2]:
+  - button "다크 모드로 변경" [ref=e3] [cursor=pointer]:
+    - img [ref=e4]
+  - generic [ref=e485]:
+    - complementary [ref=e486]:
+      - link "TodoListApp 홈" [ref=e487] [cursor=pointer]:
+        - /url: /todos
+        - img [ref=e488]
+        - generic [ref=e496]: TodoListApp
+      - navigation [ref=e497]:
+        - link "홈" [ref=e498] [cursor=pointer]:
+          - /url: /todos
+        - link "카테고리" [ref=e499] [cursor=pointer]:
+          - /url: /categories
+        - link "프로필" [ref=e500] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=e501]:
+        - generic [ref=e502]: 김지수
+        - button "로그아웃" [ref=e503] [cursor=pointer]
+    - main [ref=e504]:
+      - generic [ref=e505]:
+        - generic [ref=e506]:
+          - generic [ref=e507]:
+            - button "달력" [ref=e508] [cursor=pointer]
+            - button "목록" [ref=e509] [cursor=pointer]
+          - button "+ 할일 등록" [ref=e510] [cursor=pointer]
+        - generic [ref=e612]:
+          - combobox [ref=e613] [cursor=pointer]:
+            - option "전체 카테고리" [selected]
+            - option "일반"
+            - option "업무"
+            - option "개인"
+          - textbox [ref=e614]
+          - generic [ref=e615]: ~
+          - textbox [ref=e616]
+          - combobox [ref=e617] [cursor=pointer]:
+            - option "전체" [selected]
+            - option "미완료"
+            - option "완료"
+          - button "필터 초기화" [ref=e618] [cursor=pointer]
+        - generic [ref=e620]:
+          - paragraph [ref=e643]: 등록된 할일이 없습니다.
+          - paragraph [ref=e644]: 새 할일을 추가해 보세요.
+          - button "할일 등록" [ref=e645] [cursor=pointer]

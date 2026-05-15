@@ -1,0 +1,75 @@
+- generic [ref=e2]:
+  - button "다크 모드로 변경" [ref=e3] [cursor=pointer]:
+    - img [ref=e4]
+  - generic [ref=e1203]:
+    - complementary [ref=e1204]:
+      - link "TodoListApp 홈" [ref=e1205] [cursor=pointer]:
+        - /url: /todos
+        - img [ref=e1206]
+        - generic [ref=e1214]: TodoListApp
+      - navigation [ref=e1215]:
+        - link "홈" [ref=e1216] [cursor=pointer]:
+          - /url: /todos
+        - link "카테고리" [ref=e1217] [cursor=pointer]:
+          - /url: /categories
+        - link "프로필" [ref=e1218] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=e1219]:
+        - generic [ref=e1220]: 김지수
+        - button "로그아웃" [ref=e1221] [cursor=pointer]
+    - main [ref=e1222]:
+      - generic [ref=e1223]:
+        - generic [ref=e1224]:
+          - generic [ref=e1225]:
+            - button "달력" [ref=e1226] [cursor=pointer]
+            - button "목록" [ref=e1227] [cursor=pointer]
+          - button "+ 할일 등록" [ref=e1228] [cursor=pointer]
+        - generic [ref=e1338]:
+          - combobox [ref=e1339] [cursor=pointer]:
+            - option "전체 카테고리" [selected]
+            - option "일반"
+            - option "업무"
+            - option "개인"
+          - textbox [ref=e1340]
+          - generic [ref=e1341]: ~
+          - textbox [ref=e1342]
+          - combobox [ref=e1343] [cursor=pointer]:
+            - option "전체" [selected]
+            - option "미완료"
+            - option "완료"
+          - button "필터 초기화" [active] [ref=e1344] [cursor=pointer]
+        - generic [ref=e1346]:
+          - generic [ref=e1414]:
+            - generic [ref=e1415]:
+              - checkbox "전체 일정 선택" [ref=e1416] [cursor=pointer]
+              - generic [ref=e1417]: 전체 선택
+            - generic [ref=e1418]:
+              - generic [ref=e1419]: 0개 선택됨
+              - button "선택 삭제" [disabled]
+          - generic [ref=e1420] [cursor=pointer]:
+            - 'checkbox "삭제 대상으로 선택: 책 읽기 - 클린코드" [ref=e1421]'
+            - checkbox "할일 완료 처리" [checked] [ref=e1422]
+            - generic [ref=e1423]:
+              - generic [ref=e1424]: 책 읽기 - 클린코드
+              - generic [ref=e1425]:
+                - generic [ref=e1426]: 일반
+                - generic [ref=e1427]: 2026년 5월 12일
+            - 'button "할일 삭제: 책 읽기 - 클린코드" [ref=e1428]': 삭제
+          - generic [ref=e1438] [cursor=pointer]:
+            - 'checkbox "삭제 대상으로 선택: 아침 운동 30분" [ref=e1439]'
+            - checkbox "할일 완료 처리" [ref=e1440]
+            - generic [ref=e1441]:
+              - generic [ref=e1442]: 아침 운동 30분
+              - generic [ref=e1443]:
+                - generic [ref=e1444]: 개인
+                - generic [ref=e1445]: 2026년 5월 19일
+            - 'button "할일 삭제: 아침 운동 30분" [ref=e1446]': 삭제
+          - generic [ref=e1429] [cursor=pointer]:
+            - 'checkbox "삭제 대상으로 선택: 업무 보고서 작성" [ref=e1430]'
+            - checkbox "할일 완료 처리" [ref=e1431]
+            - generic [ref=e1432]:
+              - generic [ref=e1433]: 업무 보고서 작성
+              - generic [ref=e1434]:
+                - generic [ref=e1435]: 업무
+                - generic [ref=e1436]: 2026년 5월 14일
+            - 'button "할일 삭제: 업무 보고서 작성" [ref=e1437]': 삭제

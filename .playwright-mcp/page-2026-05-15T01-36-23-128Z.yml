@@ -1,0 +1,54 @@
+- generic [ref=e2]:
+  - button "다크 모드로 변경" [ref=e3] [cursor=pointer]:
+    - img [ref=e4]
+  - generic [ref=e646]:
+    - complementary [ref=e647]:
+      - link "TodoListApp 홈" [ref=e648] [cursor=pointer]:
+        - /url: /todos
+        - img [ref=e649]
+        - generic [ref=e657]: TodoListApp
+      - navigation [ref=e658]:
+        - link "홈" [ref=e659] [cursor=pointer]:
+          - /url: /todos
+        - link "카테고리" [ref=e660] [cursor=pointer]:
+          - /url: /categories
+        - link "프로필" [ref=e661] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=e662]:
+        - generic [ref=e663]: 김지수
+        - button "로그아웃" [ref=e664] [cursor=pointer]
+    - main [ref=e665]:
+      - generic [ref=e666]:
+        - heading "카테고리 관리" [level=1] [ref=e667]
+        - generic [ref=e668]:
+          - generic [ref=e669]: 새 카테고리 추가
+          - generic [ref=e670]:
+            - textbox "카테고리명을 입력하세요" [ref=e671]
+            - button "추가" [ref=e672] [cursor=pointer]
+        - generic [ref=e673]:
+          - generic [ref=e674]:
+            - heading "기본 카테고리 (수정/삭제 불가)" [level=2] [ref=e675]
+            - generic [ref=e676]:
+              - generic [ref=e677]:
+                - generic [ref=e678]: 일반
+                - generic [ref=e679]: (기본)
+              - generic [ref=e680]:
+                - generic [ref=e681]: 업무
+                - generic [ref=e682]: (기본)
+              - generic [ref=e683]:
+                - generic [ref=e684]: 개인
+                - generic [ref=e685]: (기본)
+          - generic [ref=e686]:
+            - heading "사용자 정의 카테고리" [level=2] [ref=e687]
+            - generic [ref=e689]:
+              - generic [ref=e690]:
+                - generic [ref=e697]: 사이드 프로젝트 & 부업
+                - button "수정" [ref=e698] [cursor=pointer]
+                - button "삭제" [active] [ref=e699] [cursor=pointer]
+              - dialog "카테고리 삭제" [ref=e700]:
+                - generic [ref=e701]:
+                  - heading "카테고리 삭제" [level=2] [ref=e702]
+                  - generic [ref=e703]: 이 카테고리를 삭제하시겠습니까?
+                  - generic [ref=e704]:
+                    - button "취소" [ref=e705] [cursor=pointer]
+                    - button "삭제" [ref=e706] [cursor=pointer]

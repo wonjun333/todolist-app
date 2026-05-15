@@ -1,0 +1,41 @@
+- generic [ref=e2]:
+  - button "다크 모드로 변경" [ref=e3] [cursor=pointer]:
+    - img [ref=e4]
+  - generic [ref=e1203]:
+    - complementary [ref=e1204]:
+      - link "TodoListApp 홈" [ref=e1205] [cursor=pointer]:
+        - /url: /todos
+        - img [ref=e1206]
+        - generic [ref=e1214]: TodoListApp
+      - navigation [ref=e1215]:
+        - link "홈" [ref=e1216] [cursor=pointer]:
+          - /url: /todos
+        - link "카테고리" [ref=e1217] [cursor=pointer]:
+          - /url: /categories
+        - link "프로필" [ref=e1218] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=e1219]:
+        - generic [ref=e1220]: 김지수
+        - button "로그아웃" [ref=e1221] [cursor=pointer]
+    - main [ref=e1222]:
+      - generic [ref=e1223]:
+        - generic [ref=e1224]:
+          - generic [ref=e1225]:
+            - button "달력" [ref=e1226] [cursor=pointer]
+            - button "목록" [ref=e1227] [cursor=pointer]
+          - button "+ 할일 등록" [ref=e1228] [cursor=pointer]
+        - generic [ref=e1338]:
+          - combobox [ref=e1339] [cursor=pointer]:
+            - option "전체 카테고리"
+            - option "일반"
+            - option "업무" [selected]
+            - option "개인"
+          - textbox [ref=e1340]: 2026-05-11
+          - generic [ref=e1341]: ~
+          - textbox [ref=e1342]: 2026-05-15
+          - combobox [ref=e1343] [cursor=pointer]:
+            - option "전체"
+            - option "미완료" [selected]
+            - option "완료"
+          - button "필터 초기화" [active] [ref=e1344] [cursor=pointer]
+        - status "로딩 중" [ref=e1466]

@@ -1,0 +1,57 @@
+- generic [ref=e2]:
+  - button "다크 모드로 변경" [ref=e3] [cursor=pointer]:
+    - img [ref=e4]
+  - generic [ref=e1203]:
+    - complementary [ref=e1204]:
+      - link "TodoListApp 홈" [ref=e1205] [cursor=pointer]:
+        - /url: /todos
+        - img [ref=e1206]
+        - generic [ref=e1214]: TodoListApp
+      - navigation [ref=e1215]:
+        - link "홈" [ref=e1216] [cursor=pointer]:
+          - /url: /todos
+        - link "카테고리" [ref=e1217] [cursor=pointer]:
+          - /url: /categories
+        - link "프로필" [ref=e1218] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=e1219]:
+        - generic [ref=e1220]: 김지수
+        - button "로그아웃" [ref=e1221] [cursor=pointer]
+    - main [ref=e1222]:
+      - generic [ref=e1223]:
+        - generic [ref=e1224]:
+          - generic [ref=e1225]:
+            - button "달력" [ref=e1226] [cursor=pointer]
+            - button "목록" [ref=e1227] [cursor=pointer]
+          - button "+ 할일 등록" [ref=e1228] [cursor=pointer]
+        - generic [ref=e1338]:
+          - combobox [ref=e1339] [cursor=pointer]:
+            - option "전체 카테고리"
+            - option "일반"
+            - option "업무" [selected]
+            - option "개인"
+          - textbox [ref=e1340]: 2026-05-11
+          - generic [ref=e1341]: ~
+          - textbox [ref=e1342]: 2026-05-15
+          - combobox [ref=e1343] [cursor=pointer]:
+            - option "전체"
+            - option "미완료" [selected]
+            - option "완료"
+          - button "필터 초기화" [active] [ref=e1344] [cursor=pointer]
+        - generic [ref=e1346]:
+          - generic [ref=e1467]:
+            - generic [ref=e1468]:
+              - checkbox "전체 일정 선택" [ref=e1469] [cursor=pointer]
+              - generic [ref=e1470]: 전체 선택
+            - generic [ref=e1471]:
+              - generic [ref=e1472]: 0개 선택됨
+              - button "선택 삭제" [disabled]
+          - generic [ref=e1473] [cursor=pointer]:
+            - 'checkbox "삭제 대상으로 선택: 업무 보고서 작성" [ref=e1474]'
+            - checkbox "할일 완료 처리" [ref=e1475]
+            - generic [ref=e1476]:
+              - generic [ref=e1477]: 업무 보고서 작성
+              - generic [ref=e1478]:
+                - generic [ref=e1479]: 업무
+                - generic [ref=e1480]: 2026년 5월 14일
+            - 'button "할일 삭제: 업무 보고서 작성" [ref=e1481]': 삭제
